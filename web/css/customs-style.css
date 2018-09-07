@@ -1,0 +1,8 @@
+
+.center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th.dt-center, td.dt-center { text-align: center; }
