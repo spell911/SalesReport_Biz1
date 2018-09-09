@@ -5,19 +5,15 @@
         <data xmlns="http://www.netbeans.org/ns/web-project/3">
             <name>SalesReport_Biz1</name>
             <minimum-ant-version>1.6.5</minimum-ant-version>
-            <explicit-platform explicit-source-supported="true"/>
             <web-module-libraries>
                 <library dirs="200">
                     <file>${file.reference.jt400.jar}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
                     <file>${file.reference.sqljdbc4.jar}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
                     <file>${file.reference.org.json.jar}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
             <web-module-additional-libraries/>

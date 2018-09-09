@@ -1,0 +1,62 @@
+﻿ [
+    {
+      "value": "B",
+      "label": "B - ขายลดราคาพิเศษ"
+    },
+    {
+      "value": "C",
+      "label": "C - ศูนย์จำหน่าย"
+    },
+    {
+      "value": "D",
+      "label": "D - E-COMMERCE"
+    },
+    {
+      "value": "E",
+      "label": "E - สถาบัน"
+    },
+    {
+      "value": "F",
+      "label": "F - หน้าร้านฝากขาย"
+    },
+    {
+      "value": "G",
+      "label": "G - สมาชิกWITK"
+    },
+    {
+      "value": "K",
+      "label": "K - Online"
+    },
+    {
+      "value": "L",
+      "label": "L - เลอวีด้า"
+    },
+    {
+      "value": "M",
+      "label": "M - สมาชิกเวียนนา"
+    },
+    {
+      "value": "O",
+      "label": "O - จักรจาโนเม่"
+    },
+    {
+      "value": "R",
+      "label": "R - สมาชิก Re'vinus"
+    },
+    {
+      "value": "S",
+      "label": "S - สมาชิกกิตติมศักดิ์"
+    },
+    {
+      "value": "V",
+      "label": "V - วาเนสซ่า สถาบัน"
+    },
+    {
+      "value": "W",
+      "label": "W - สวัสดิการ/พนง.ในเครือ"
+    },
+    {
+      "value": "X",
+      "label": "X - ต่างประเทศ"
+    }
+  ]

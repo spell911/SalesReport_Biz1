@@ -1,0 +1,301 @@
+[
+   {
+      "label":"B - ขายลดราคาพิเศษ",
+      "children":[
+         {
+            "value":"1NB",
+            "label":"1NB - ขายลดราคาพิเศษ"
+         }
+      ]
+   },
+   {
+      "label":"C - ศูนย์จำหน่าย",
+      "children":[
+         {
+            "value":"1NC",
+            "label":"1NC - ศูนย์จำหน่าย"
+         },
+         {
+            "value":"1NO",
+            "label":"1NO - คู่ค้าSHOP"
+         }
+      ]
+   },
+   {
+      "label":"D - E-COMMERCE",
+      "children":[
+         {
+            "value":"0BM",
+            "label":"0BM - BUSINESS"
+         },
+         {
+            "value":"2OC",
+            "label":"2OC - สมาชิกผู้ใช้"
+         },
+         {
+            "value":"4MD",
+            "label":"4MD - WEBMEMBER"
+         }
+      ]
+   },
+   {
+      "label":"E - สถาบัน",
+      "children":[
+         {
+            "value":"1NE",
+            "label":"1NE - สถาบัน"
+         }
+      ]
+   },
+   {
+      "label":"F - หน้าร้านฝากขาย",
+      "children":[
+         {
+            "value":"1NF",
+            "label":"1NF - แฟ็กทอรี่"
+         }
+      ]
+   },
+   {
+      "label":"G - สมาชิกWITK",
+      "children":[
+         {
+            "value":"5MG",
+            "label":"5MG - สมาชิกลูกค้าWITK"
+         }
+      ]
+   },
+   {
+      "label":"K - Online",
+      "children":[
+         {
+            "value":"3KK",
+            "label":"3KK - สมาชิกอีซี่คลิก"
+         },
+         {
+            "value":"3KN",
+            "label":"3KN - สมาชิกแคตแนะนำอีซี่คลิก"
+         },
+         {
+            "value":"1NK",
+            "label":"1NK - แคตตาล๊อคOnline"
+         }
+      ]
+   },
+   {
+      "label":"L - เลอวีด้า",
+      "children":[
+         {
+            "value":"1L1",
+            "label":"1L1 - LNM"
+         },
+         {
+            "value":"0PM",
+            "label":"0PM - PRIVILEGED"
+         }
+      ]
+   },
+   {
+      "label":"M - สมาชิกเวียนนา",
+      "children":[
+         {
+            "value":"0BM",
+            "label":"0BM - BUSINESS"
+         },
+         {
+            "value":"0FM",
+            "label":"0FM - PRIVILEGED"
+         },
+         {
+            "value":"0GM",
+            "label":"0GM - EXECUTIVE"
+         },
+         {
+            "value":"0HM",
+            "label":"0HM - BUSINESS"
+         },
+         {
+            "value":"0JM",
+            "label":"0JM - BUSINESS"
+         },
+         {
+            "value":"0LM",
+            "label":"0LM - LIGHTMEMBER"
+         },
+         {
+            "value":"0MM",
+            "label":"0MM - MILLIONAIRE"
+         },
+         {
+            "value":"0PM",
+            "label":"0PM - PRIVILEGED"
+         },
+         {
+            "value":"0SM",
+            "label":"0SM - BUSINESS"
+         },
+         {
+            "value":"0TM",
+            "label":"0TM - BUSINESS"
+         },
+         {
+            "value":"0UM",
+            "label":"0UM - PRIVILEGED"
+         },
+         {
+            "value":"0VM",
+            "label":"0VM - SUPERIOR"
+         }
+      ]
+   },
+   {
+      "label":"O - จักรจาโนเม่",
+      "children":[
+         {
+            "value":"0FM",
+            "label":"0FM - PRIVILEGED"
+         },
+         {
+            "value":"0PM",
+            "label":"0PM - PRIVILEGED"
+         },
+         {
+            "value":"0UM",
+            "label":"0UM - PRIVILEGED"
+         },
+         {
+            "value":"1NB",
+            "label":"1NB - ขายลดราคาพิเศษ"
+         },
+         {
+            "value":"2OB",
+            "label":"2OB - ขายพิเศษ"
+         },
+         {
+            "value":"2OC",
+            "label":"2OC - สมาชิกผู้ใช้"
+         },
+         {
+            "value":"2OD",
+            "label":"2OD - ห้างสรรพสินค้า"
+         },
+         {
+            "value":"2OE",
+            "label":"2OE - สถาบันการศึกษา"
+         },
+         {
+            "value":"2OJ",
+            "label":"2OJ - สมาชิกผู้ขายกลุ่มศูนย์"
+         },
+         {
+            "value":"2OM",
+            "label":"2OM - ขายผ่านสื่อ"
+         },
+         {
+            "value":"2OO",
+            "label":"2OO - ขายOutlet"
+         },
+         {
+            "value":"2OP",
+            "label":"2OP - สถาบันอาชีพต่างๆ"
+         },
+         {
+            "value":"2OS",
+            "label":"2OS - ร้านค้าส่ง"
+         },
+         {
+            "value":"2OX",
+            "label":"2OX - ขายอื่นๆ"
+         }
+      ]
+   },
+   {
+      "label":"R - สมาชิก Re'vinus",
+      "children":[
+         {
+            "value":"0PM",
+            "label":"0PM - PRIVILEGED"
+         },
+         {
+            "value":"0RM",
+            "label":"0RM - Re'vinus"
+         },
+         {
+            "value":"0UM",
+            "label":"0UM - PRIVILEGED"
+         },
+         {
+            "value":"2OC",
+            "label":"2OC - สมาชิกผู้ใช้"
+         }
+      ]
+   },
+   {
+      "label":"S - สมาชิกกิตติมศักดิ์",
+      "children":[
+         {
+            "value":"0TM",
+            "label":"0TM - BUSINESS"
+         },
+         {
+            "value":"0UM",
+            "label":"0UM - PRIVILEGED"
+         },
+         {
+            "value":"1NB",
+            "label":"1NB - ขายลดราคาพิเศษ"
+         },
+         {
+            "value":"1NH",
+            "label":"1NH - สมาชิกกลุ่มค้าปลีก"
+         },
+         {
+            "value":"1NS",
+            "label":"1NS - สมาชิกกิตติมศักดิ์"
+         },
+         {
+            "value":"1NT",
+            "label":"1NT - สมาชิกกิตติมศักดิ์ พิเศษ"
+         },
+         {
+            "value":"5BA",
+            "label":"5BA - ห้างบิ๊กซีส่วนลดปกติ"
+         },
+         {
+            "value":"5MA",
+            "label":"5MA - ห้างเดอะมอลล์ลดปกติ"
+         },
+         {
+            "value":"5RB",
+            "label":"5RB - ห้างโรบินสันลดพิเศษ"
+         }
+      ]
+   },
+   {
+      "label":"V - วาเนสซ่า สถาบัน",
+      "children":[
+         {
+            "value":"1NV",
+            "label":"1NV - วาเนสซ่า สถาบัน"
+         }
+      ]
+   },
+   {
+      "label":"W - สวัสดิการ/พนง.ในเครือ",
+      "children":[
+         {
+            "value":"1NW",
+            "label":"1NW - สวัสดิการ/พนง.ในเครือ"
+         }
+      ]
+   },
+   {
+      "label":"X - ต่างประเทศ",
+      "children":[
+         {
+            "value":"1NX",
+            "label":"1NX - ต่างประเทศ"
+         }
+      ]
+   }
+]

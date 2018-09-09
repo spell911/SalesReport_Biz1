@@ -4,7 +4,7 @@ $(document).ready(function () {
     $('#sale_types_table').dataTable({
         ajax: {
             type: "post",
-            url: "json/_sale_types.jsp",
+            url: "json/_sale_types.txt",
             data: {from: "sale_types_table"},
             dataSrc: ""
         },

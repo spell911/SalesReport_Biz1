@@ -6,12 +6,11 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<div class="card mb-3">
-    <div class="card-header">
-        <b>Sale Types</b></div>
-    <div class="card-body">
-        <div class="table-responsive col-8" id="sale_types_tabble_div">
-            <table class="table table-bordered display" id="sale_types_table" width="100%" cellspacing="0" >
+
+<div class="box">
+    <div class="box-body">
+        <div class="col-sm-8">       
+            <table class="table table-bordered table-striped" id="sale_types_table" style="width: 100%" cellspacing="0" >
                 <thead>
                     <tr>
                         <th>No.</th>

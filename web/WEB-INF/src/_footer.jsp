@@ -6,10 +6,11 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<footer class="sticky-footer">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright © Thai Wacoal (Public) Co., Ltd. 2018</span>
-        </div>
+<footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+        Author : phich.bur
     </div>
+    <!-- Default to the left -->
+    <strong>Copyright © Thai Wacoal (Public) Co., Ltd. 2018</strong> All rights reserved.
 </footer>

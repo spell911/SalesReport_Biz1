@@ -6,3 +6,11 @@
 }
 
 th.dt-center, td.dt-center { text-align: center; }
+
+body {
+    padding-top: 0px;
+}
+footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}

@@ -10,64 +10,118 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sales Report BIZ1</title>
-        <!-- Bootstrap core CSS-->
-        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Page level plugin CSS-->
-        <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
-        <!-- Custom styles for this template-->
-        <link href="css/sb-admin.css" type="text/css" rel="stylesheet">
+        <title>AdminLTE 2 | Starter</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="vendor/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="vendor/Ionicons/css/ionicons.min.css">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+        <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+              page. However, you can choose any other skin. Make sure you
+              apply the skin class to the body tag so the changes take effect. -->
+        <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
         <link href="css/customs-style.css" type="text/css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+
+        <!-- Google Font -->
+        <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
     </head>
+    <!--
+    BODY TAG OPTIONS:
+    =================
+    Apply one or more of the following classes to get the
+    desired effect
+    |---------------------------------------------------------|
+    | SKINS         | skin-blue                               |
+    |               | skin-black                              |
+    |               | skin-purple                             |
+    |               | skin-yellow                             |
+    |               | skin-red                                |
+    |               | skin-green                              |
+    |---------------------------------------------------------|
+    |LAYOUT OPTIONS | fixed                                   |
+    |               | layout-boxed                            |
+    |               | layout-top-nav                          |
+    |               | sidebar-collapse                        |
+    |               | sidebar-mini                            |
+    |---------------------------------------------------------|
+    -->
+    <body class="hold-transition skin-black sidebar-mini">
+        <div class="wrapper">
 
-    <body id="page-top">
+            <!-- Main Header -->
+            <header class="main-header">
+                <jsp:include page="WEB-INF/src/_navbar.jsp" />
+            </header>
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar">
 
-        <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+                <!-- sidebar: style can be found in sidebar.less -->
+                <section class="sidebar">
 
-            <a class="navbar-brand mr-1" href="index.html">Sales Report BIZ1</a>
+                    <!-- Sidebar Menu -->
+                    <ul class="sidebar-menu" data-widget="tree">
+                        <li class="header">MENU</li>
+                        <!-- Optionally, you can add icons to the links -->
+                        <li class="active"><a href="#"><i class="fa fa-edit"></i> <span>Input Sale Types</span></a></li>
+                        <li><a href="#"><i class="fa fa-list-ul"></i> <span>Sale Types</span></a></li>
+                    </ul>
+                    <!-- /.sidebar-menu -->
+                </section>
+                <!-- /.sidebar -->
+            </aside>
 
-            <!-- Navbar Clock -->
-            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
-                <div id="clock" style="color: white"></div>
-            </form>
-        </nav>
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>
+                        Input Sale Types
+                        <small>(คีย์ประเภทการขาย)</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-bars"></i> Main</a></li>
+                        <li class="active">Input Sale Types</li>
+                    </ol>
+                </section>
 
-        <div id="wrapper">
-
-            <!-- Sidebar -->
-            <jsp:include page="WEB-INF/src/_sidebar.jsp" />
-            <div id="content-wrapper">
-                <div class="container-fluid">
-                    <!--input form-->
+                <!-- Main content -->
+                <section class="content container-fluid">
                     <jsp:include page="WEB-INF/src/_input_sale_types_body.jsp" />
-                </div>
-                <!-- Sticky Footer -->
-                <jsp:include page="WEB-INF/src/_footer.jsp" />
+                </section>
+                <!-- /.content -->
             </div>
             <!-- /.content-wrapper -->
+
+            <!-- Main Footer -->
+            <jsp:include page="WEB-INF/src/_footer.jsp" />
         </div>
-        <!-- /#wrapper -->
-        <!--Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+        <!-- ./wrapper -->
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-        <!-- Page level plugin JavaScript-->
-        <script src="vendor/datatables/jquery.dataTables.js"></script>
-        <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
-        <script src="js/_sale_types.js"></script>
-        <!--clock-->
+        <!-- REQUIRED JS SCRIPTS -->
+
+        <!-- jQuery 3 -->
+        <script src="vendor/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="vendor/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/adminlte.min.js"></script>
         <script src="js/clock.js"></script>
-
+        <script src="js/_input_sale_types.js"></script>
     </body>
 </html>
