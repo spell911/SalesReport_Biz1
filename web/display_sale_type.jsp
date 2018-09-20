@@ -74,14 +74,12 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Sale Types: Booths
-                        <small>(ช่องทางการขาย: Booths)</small>
+                        <span id="tag_name_head">Sale Types: </span><span id="tag_name"></span>
+                        <small>(ช่องทางการขาย: <span id="tag_name_s"></span>)</small>
                     </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-bars"></i> Main</a></li>
-                        <li><a href="#">Sale Types</a></li>
-                        <li class="active">Booths</li>
-                    </ol>
+                    <!-- Breadcrumb -->
+                    <jsp:include page="WEB-INF/src/_breadcrumb.jsp" />
+                    <!-- /.Breadcrumb -->
                 </section>
                 <!-- Main content -->
                 <section class="content container-fluid">
@@ -116,6 +114,7 @@
         <script src="dist/js/adminlte.min.js"></script>
         <!-- Anothor script -->
         <script src="js/clock.js"></script>
+        <script src="js/_breadcrumb.js"></script>
         <script src="js/_display_sale_types.js"></script>
         <script src="js/sidebar_stats.js"></script>
     </body>

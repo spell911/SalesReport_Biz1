@@ -10,49 +10,72 @@
     <div class="box-body">
         <form class="form-horizontal">
             <div class="form-group row">
-                <label for="wn-select" class="col-sm-1 control-label">Warehouse</label>
+                <label for="wn-select" class="col-sm-2 control-label">Warehouse</label>
                 <div class="col-sm-3">
-                    <select id="wn-select" multiple="multiple">
+                    <select id="wh-select" multiple="multiple">
                     </select>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="gm-select" class="col-sm-1 control-label">Group Member</label>
+                <label for="gm-select" class="col-sm-2 control-label">Group Member</label>
                 <div class="col-sm-3">
                     <select id="gm-select" multiple="multiple">
                     </select>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="gl-select" class="col-sm-1 control-label">Group Level</label>
+                <label for="gl-select" class="col-sm-2 control-label">Group Level</label>
                 <div class="col-sm-3">
                     <select id="gl-select" multiple="multiple">
                     </select>
                 </div>
-                <div class="col-sm-3">
-                    <p style="padding-top: 2%;color: red">*Please select group member.</p>
-                </div>
+                <div id="glstats" class="col-sm-3"></div>
             </div>
             <div class="form-group row">
-                <label for="dt-select" class="col-sm-1 control-label">Delivery Terms</label>
+                <label for="dt-select" class="col-sm-2 control-label">Delivery Terms</label>
                 <div class="col-sm-3">
                     <select id="dt-select" multiple="multiple">
-                        <option value="1">Option 1</option>
-                        <option value="2">Option 2</option>
-                        <option value="3">Option 3</option>
-                        <option value="4">Option 4</option>
-                        <option value="5">Option 5</option>
-                        <option value="6">Option 6</option>
                     </select>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="dt-select" class="col-sm-1 control-label"></label>
+                <label for="dt-select" class="col-sm-2 control-label"></label>
                 <div class="col-sm-3">
-                    <a href="display_sale_type.jsp" class="btn btn-primary" id="add_btn">Save</a>
-                    <a href="display_sale_type.jsp" class="btn btn-default" id="add_btn">Cancel</a>
+                    <a class="btn btn-primary" id="save_details_btn">Save</a>
+                    <a href="#" class="btn btn-default" id="cancel_btn">Cancel</a>
                 </div>
             </div>
         </form>
+    </div>
+</div>
+
+<!-- Save Display Modal -->
+<div class="modal fade" id="SaveDisplayAddDetails_Modal" role="dialog" data-backdrop="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Save Display</h5>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered display" id="save_display_add_sale_types_details_table" width="100%" cellspacing="0" >
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Sale Type</th>
+                            <th>Warehouse</th>
+                            <th>Member Group</th>
+                            <th>Member Level</th>
+                            <th>Delivery Terms</th>
+                            <th class="dt-center">Delete</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="modal-footer" id="modalfooter">
+                <div id="savestats"></div>
+                <button type="button" class="btn btn-primary" id="_modal_save_btn">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="_modal_cancle_btn">Close</button>
+            </div>
+        </div>
     </div>
 </div>

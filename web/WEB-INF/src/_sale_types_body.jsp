@@ -16,7 +16,7 @@
                         <th>No.</th>
                         <th style="width: auto">Sale Type Code</th>
                         <th style="width: auto">Sale Type Name</th>
-                        <th style="width: auto">View</th>
+                        <th style="width: auto" class="dt-center">View</th>
                     </tr>
                 </thead>
             </table>

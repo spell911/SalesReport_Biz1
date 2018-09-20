@@ -8,18 +8,20 @@
 <!DOCTYPE html>
 <div class="box">
     <div class="box-body">
-        <div class="col-sm-8">    
+        <div class="col-sm-10">    
             <div class="form-group">
-                <a href="add_details.jsp" class="btn btn-primary" id="add_btn" style="width: 20%">Add</a>
+                <a href="#" class="btn btn-primary" id="add_btn" style="width: 20%">Add Sale Types</a>
             </div>
             <table class="table table-bordered display" id="sale_types_table" width="100%" cellspacing="0" >
                 <thead>
                     <tr>
+                        <th>No.</th>
                         <th>Warehouse</th>
                         <th>Member Group</th>
                         <th>Member Level</th>
                         <th>Delivery Terms</th>
-                        <th>Delete</th>
+                        <th class="dt-center">Delete</th>
+                        <th>Type Id</th>
                     </tr>
                 </thead>
             </table>
@@ -38,33 +40,34 @@
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">Warehouse</label>
                         <div class="col-sm-6">
-                            <input class="form-control" type="text" id="" placeholder="" disabled>
+                            <input class="form-control" type="text" id="wh_d_modal" placeholder="" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">Member Group</label>
                         <div class="col-sm-6">
-                            <input class="form-control" type="text" id="" placeholder="" disabled>
+                            <input class="form-control" type="text" id="gm_d_modal" placeholder="" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">Member Level</label>
                         <div class="col-sm-6">
-                            <input class="form-control" type="text" id="" placeholder="" disabled>
+                            <input class="form-control" type="text" id="gl_d_modal" placeholder="" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label">Delivery Terms</label>
                         <div class="col-sm-6">
-                            <input class="form-control" type="text" id="" placeholder="" disabled>
+                            <input class="form-control" type="text" id="dt_d_modal" placeholder="" disabled>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="" class="col-sm-3 control-label"></label>
                         <div class="col-sm-2">
-                            <button type="button" class="btn btn-danger btn-sm" id="">Delete</button>
+                            <button type="button" class="btn btn-danger btn-sm" id="del_btn_modal">Delete</button>
                         </div>
                     </div>
+                    <input class="form-control" type="text" id="typeid_d_modal" placeholder="" style="visibility: hidden">
                 </form>
             </div>
             <div class="modal-footer">

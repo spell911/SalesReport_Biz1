@@ -76,15 +76,12 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Add Sale Types: Booths
-                        <small>(เพิ่มช่องทางการขาย: Booths)</small>
+                        <span id="tag_name">Add Sale Types: </span><span id="name_head"></span>
+                        <small>(เพิ่มช่องทางการขาย: <span id="name_head_s"></span>)</small>
                     </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-bars"></i> Main</a></li>
-                        <li><a href="#">Sale Types</a></li>
-                        <li><a href="#">Booths</a></li>
-                        <li class="active">Add Booths</li>
-                    </ol>
+                    <!-- Breadcrumb -->
+                    <jsp:include page="WEB-INF/src/_breadcrumb.jsp" />
+                    <!-- /.Breadcrumb -->
                 </section>
                 <!-- Main content -->
                 <section class="content container-fluid">
@@ -99,7 +96,7 @@
         <!-- ./wrapper -->
 
         <!-- REQUIRED JS SCRIPTS -->
-        <!-- jQuery 3 -->
+        <!-- jQuery 1.10.2 -->
         <script src="vendor/jquery/dist/jquery.min.js"></script>
         <!-- jQuery UI 1.11.4 -->
         <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
@@ -121,6 +118,7 @@
         <script src="dist/js/adminlte.min.js"></script>
         <!-- Anothor script -->
         <script src="js/clock.js"></script>
+        <script src="js/_breadcrumb.js"></script>
         <script src="js/_add_details.js"></script>
         <script src="js/sidebar_stats.js"></script>
     </body>

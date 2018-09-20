@@ -89,13 +89,12 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Input Sale Types
+                        <span id="tag_name">Input Sale Types</span>
                         <small>(คีย์ประเภทการขาย)</small>
                     </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-bars"></i> Main</a></li>
-                        <li class="active">Input Sale Types</li>
-                    </ol>
+                    <!-- Breadcrumb -->
+                    <jsp:include page="WEB-INF/src/_breadcrumb.jsp" />
+                    <!-- /.Breadcrumb -->
                 </section>
 
                 <!-- Main content -->

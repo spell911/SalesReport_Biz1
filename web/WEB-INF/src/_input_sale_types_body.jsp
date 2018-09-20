@@ -11,35 +11,37 @@
     <div class="box-body">
         <form class="form-horizontal">
             <div class="form-group">
-                <label for="code_sale" class="col-sm-1 control-label">Sale Type Code</label>
+                <label for="code_sale" class="col-sm-2 control-label" id="code_sale_label">Sale Type Code</label>
                 <div class="col-sm-1">
-                    <input class="form-control" type="text" id="code_sale" maxlength="2" placeholder="">
+                    <input class="form-control" type="text" id="code_sale" maxlength="2" placeholder="" style="text-transform:uppercase">
                 </div>
             </div>
             <div class="form-group">
-                <label for="desc_sale" class="col-sm-1 control-label">Sale Type Name</label>
+                <label for="desc_sale" class="col-sm-2 control-label" id="desc_sale_label">Sale Type Name</label>
                 <div class="col-sm-2">
                     <input class="form-control" type="text" id="desc_sale" maxlength="20" placeholder="">
                 </div>
             </div>
             <div class="form-group">
-                <label for="example-search-input" class="col-sm-1 control-label"></label>
+                <label for="example-search-input" class="col-sm-2 control-label"></label>
                 <div class="col-sm-4">
                     <button type="button" class="btn btn-primary" id="save_btn">Save</button>
                 </div>
             </div>
-            <div class="col-sm-8">
-                <table class="table table-bordered table-striped" id="input_sale_types_table" style="width: 100%" cellspacing="0" >
-                    <thead>
-                        <tr>
-                            <th>No.</th>
-                            <th>Sale Type Code</th>
-                            <th>Sale Type Name</th>
-                            <th>Edit</th>
-                            <th>Delete</th>
-                        </tr>
-                    </thead>
-                </table>
+            <div class="form-group">
+                <div class="col-sm-8">
+                    <table class="table table-bordered table-striped" id="input_sale_types_table" style="width: 100%" cellspacing="0" >
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>Sale Type Code</th>
+                                <th>Sale Type Name</th>
+                                <th class="dt-center">Edit</th>
+                                <th class="dt-center">Delete</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
             </div>
         </form>
     </div>

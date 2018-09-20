@@ -1,24 +1,23 @@
 $(document).ready(function () {
-    //sale_types_table show data of sale types
-
+//sale_types_table show data of sale types
+    var edit_sale = "<td style=\"text-align: center;width: auto\"><a id=\"edit_btn\" href=\"#\" data-toggle=\"modal\" data-target=\"#EditSaleTypes_Modal\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></a>";
+    var delete_sale = "<td style=\"text-align: center;width: auto\"><a id=\"delete_btn\" href=\"#\" data-toggle=\"modal\" data-target=\"#DeleteSaleTypes_Modal\" style=\"color: red\"><i class=\"fa fa-trash-o\" aria-hidden=\"true\"></i></a>";
     $('#input_sale_types_table').dataTable({
         ajax: {
             type: "post",
-            url: "json/_input_sale_types.txt",
+            url: "json/api/_sale_types.jsp",
             data: {from: "input_sale_types_table"},
             dataSrc: ""
         },
         columns: [
             {data: "seq"},
             {data: "code_sale"},
-            {data: "desc_sale"},
-            {data: "edit_sale"},
-            {data: "delete_sale"}
+            {data: "desc_sale"}
         ],
         columnDefs: [
             {"className": "dt-center", "targets": [0]},
-            {"className": "dt-center", "targets": [3]},
-            {"className": "dt-center", "targets": [4]}
+            {"className": "dt-center", "targets": [3], data: null, defaultContent: edit_sale, orderable: false},
+            {"className": "dt-center", "targets": [4], data: null, defaultContent: delete_sale, orderable: false}
         ]
     });
     //onclick ,show data on form
@@ -46,40 +45,50 @@ $(document).ready(function () {
     $('#save_btn').on('click', function () {
         var code_sale = document.getElementById("code_sale").value;
         var desc_sale = document.getElementById("desc_sale").value;
-        $.ajax({
-            global: false,
-            type: "post",
-            url: "json/_input_sale_types.jsp",
-            data: {
-                code_sale: code_sale,
-                desc_sale: desc_sale
-            },
-            beforeSend: function () {
-            },
-            complete: function () {
-            },
-            success: function (response) {
-                var myRec = JSON.parse(response);
-                if (myRec === 1) {
-                    alert("Save Success!");
-                    $('#input_sale_types_table').DataTable().ajax.reload();
-                } else {
-                    alert("Save Failed!");
+        if (code_sale === "") {
+            alert("Plase input the sale type code.");
+            $("#code_sale").focus();
+        } else if (desc_sale === "") {
+            alert("Plase input the sale type name.");
+            $("#desc_sale").focus();
+        } else {
+            $.ajax({
+                global: false,
+                type: "post",
+                url: "json/api/_input_sale_types.jsp",
+                data: {
+                    code_sale: $.trim(code_sale),
+                    desc_sale: $.trim(desc_sale)
+                },
+                beforeSend: function () {
+                },
+                complete: function () {
+                },
+                success: function (response) {
+                    var myRec = JSON.parse(response);
+                    if (myRec === 1) {
+                        alert("Save Success!");
+                        $('#input_sale_types_table').DataTable().ajax.reload();
+                    } else if (myRec === 2) {
+                        alert("Sale type code: " + code_sale + ", is duplication.");
+                    } else {
+                        alert("Save Failed!");
+                    }
                 }
-            }
-        });
+            });
+        }
     });
-    //delete sale types
+//delete sale types
     $('#delete_btn').on('click', function () {
         var code_sale = document.getElementById("stc_d_modal").value;
-        var r = confirm("Delete Sale Types Code: " + code_sale);
+        var r = confirm("Delete this code: " + code_sale);
         if (r === true) {
             $.ajax({
                 global: false,
                 type: "post",
-                url: "json/_delete_sale_types.jsp",
+                url: "json/api/_delete_sale_types.jsp",
                 data: {
-                    code_sale: code_sale
+                    code_sale: $.trim(code_sale)
                 },
                 beforeSend: function () {
                 },
@@ -98,16 +107,16 @@ $(document).ready(function () {
             });
         }
     });
-    //update sale types
+//update sale types
     $('#edit_btn').on('click', function () {
         var code_sale = document.getElementById("stc_e_modal").value;
         var desc_sale = document.getElementById("stn_e_modal").value;
-        var r = confirm("Update Description Sale Types Code: " + code_sale);
+        var r = confirm("Edit this Code: " + code_sale);
         if (r === true) {
             $.ajax({
                 global: false,
                 type: "post",
-                url: "json/_update_sale_types.jsp",
+                url: "json/api/_update_sale_types.jsp",
                 data: {
                     code_sale: code_sale,
                     desc_sale: desc_sale
@@ -121,8 +130,10 @@ $(document).ready(function () {
                     if (myRec === 1) {
                         alert("Update Success!");
                         $('#input_sale_types_table').DataTable().ajax.reload();
-                    } else {
+                    } else if (myRec === 0) {
                         alert("Update Failed!");
+                    } else {
+                        alert("ERROR!");
                     }
                 }
             });

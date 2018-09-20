@@ -38,6 +38,7 @@
         <!-- Google Font -->
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+        
     </head>
     <!--
     BODY TAG OPTIONS:
@@ -74,13 +75,12 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Sale Types
+                        <span id="tag_name">Sale Types</span>
                         <small>(ช่องทางการขาย)</small>
                     </h1>
-                    <ol class="breadcrumb">
-                        <li><a href="#"><i class="fa fa-bars"></i> Main</a></li>
-                        <li class="active">Sale Types</li>
-                    </ol>
+                    <!-- Breadcrumb -->
+                    <jsp:include page="WEB-INF/src/_breadcrumb.jsp" />
+                    <!-- /.Breadcrumb -->
                 </section>
                 <!-- Main content -->
                 <section class="content container-fluid">
@@ -105,6 +105,7 @@
         </script>
         <!-- Bootstrap 3.3.7 -->
         <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="vendor/datatables.net/js/jquery.dataTables.min.js"></script>
         <script src="vendor/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
         <!-- Slimscroll -->
@@ -115,6 +116,7 @@
         <script src="dist/js/adminlte.min.js"></script>
         <!-- Anothor script -->
         <script src="js/clock.js"></script>
+        <script src="js/_breadcrumb.js"></script>
         <script src="js/_sale_types.js"></script>
         <script src="js/sidebar_stats.js"></script>
     </body>
