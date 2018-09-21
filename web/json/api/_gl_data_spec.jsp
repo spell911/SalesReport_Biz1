@@ -36,10 +36,10 @@
                     jsonC.put("value", value_children);
                     jsonC.put("label", value_children + " - " + label_children);
                     jsonArrGl.put(jsonC);
-                    jsonP.put("label", value_parent + " - " + label_parent);
-                    jsonP.put("children", jsonArrGl);
 //                System.out.println(value_parent + " - " + value_children + " - " + label_children + "array: " + jsonArrGl);
                 }
+                jsonP.put("label", value_parent + " - " + label_parent);
+                jsonP.put("children", jsonArrGl);
             }
             jsonArrGm.put(jsonP);
         }

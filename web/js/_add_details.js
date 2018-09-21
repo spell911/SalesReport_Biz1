@@ -7,7 +7,7 @@ $(document).ready(function () {
     document.getElementById("name_head_s").innerHTML = desc_type;
     //arr val
     var wh_arr = [], gm_arr = [], gl_arr = [], dt_arr = [];
-    var wh_arr_all = [], gm_arr_all = [], gl_arr_all = [], dt_arr_all = [];
+    var gl_arr_all = [];
     //html tag val
     var glstats_onload = "<p style=\"padding-top: 2mm\" class=\"blinker\">Loading...</p>";
     var glstats_unload = "<p style=\"padding-top: 2mm;color: red\">*Please select group member.</p>";
@@ -39,16 +39,14 @@ $(document).ready(function () {
             }
         },
         onSelectAll: function () {
-            wh_arr = [];
-            for (var i = 0; i < wh_arr_all.length; i++) {
-                wh_arr.push(wh_arr_all[i].value);
-            }
+            //console.log($('#wh-select').val());
+            wh_arr = $('#wh-select').val();
         },
         onDeselectAll: function () {
             wh_arr = [];
         },
         onDropdownHide: function () {
-//            alert(wh_arr);
+            //console.log(wh_arr);
         }
     });
     //group member
@@ -63,24 +61,19 @@ $(document).ready(function () {
         maxHeight: 400,
         onChange: function (option, checked) {
             // Get selected options.
-//            alert("check : " + $(option).val());
             if (checked === true) {
                 gm_arr.push($(option).val());
             } else if (checked === false) {
                 spliceArr(gm_arr, $(option).val());
             }
         },
-        onSelectAll: function (option, checked) {
-            gm_arr = [];
-            for (var i = 0; i < gm_arr_all.length; i++) {
-                gm_arr.push(gm_arr_all[i].value);
-            }
+        onSelectAll: function () {
+            gm_arr = $('#gm-select').val();
         },
         onDeselectAll: function () {
             gm_arr = [];
         },
         onDropdownHide: function () {
-//            alert(gm_arr);
             get_gl(gm_arr);
         }
     });
@@ -92,12 +85,8 @@ $(document).ready(function () {
         filterBehavior: 'value',
         includeSelectAllOption: true,
         allSelectedText: 'All Selected',
-//        enableClickableOptGroups: true,
-        enableCollapsibleOptGroups: true,
         maxHeight: 400,
         onChange: function (option, checked) {
-//            alert(option.length + ' options ' + (checked ? 'selected' : 'deselected') + "VALUES :" + $(option).val());
-            // Get selected options.
             if (checked === true) {
                 gl_arr.push($(option).val());
             } else if (checked === false) {
@@ -105,18 +94,13 @@ $(document).ready(function () {
             }
         },
         onSelectAll: function () {
-            gl_arr = [];
-            for (var i = 0; i < gl_arr_all.length; i++) {
-                for (var j = 0; j < gl_arr_all[i].children.length; j++) {
-                    gl_arr.push(gl_arr_all[i].children[j].value);
-                }
-            }
+            gl_arr = $('#gl-select').val();
         },
         onDeselectAll: function () {
             gl_arr = [];
         },
         onDropdownHide: function () {
-//            alert(gl_arr);
+            //console.log(gl_arr);
         }
     });
     //delivery terms
@@ -129,7 +113,6 @@ $(document).ready(function () {
         allSelectedText: 'All Selected',
         maxHeight: 400,
         onChange: function (option, checked) {
-            // Get selected options.
             if (checked === true) {
                 dt_arr.push($(option).val());
             } else if (checked === false) {
@@ -137,16 +120,14 @@ $(document).ready(function () {
             }
         },
         onSelectAll: function () {
-            dt_arr = [];
-            for (var i = 0; i < dt_arr_all.length; i++) {
-                dt_arr.push(dt_arr_all[i].value);
-            }
+            //console.log($('#dt-select').val());
+            dt_arr = $('#dt-select').val();
         },
         onDeselectAll: function () {
             dt_arr = [];
         },
         onDropdownHide: function () {
-            console.log(dt_arr);
+            //console.log(dt_arr);
         }
     });
 //get data to multiselect
@@ -156,7 +137,6 @@ $(document).ready(function () {
         url: 'json/api/_wh_data.jsp',
         dataType: 'json',
         success: function (data) {
-            wh_arr_all = data;
             $("#wh-select").multiselect('dataprovider', data);
         }
     });
@@ -166,14 +146,15 @@ $(document).ready(function () {
         url: 'json/api/_gm_data.jsp',
         dataType: 'json',
         success: function (data) {
-            gm_arr_all = data;
             $("#gm-select").multiselect('dataprovider', data);
         }
     });
     //group level
     function get_gl(gm_val) {
+        //////console.log(gm_val);
         gl_arr = [];
         gm_vals = concatequates(gm_val);
+        ////console.log(gm_vals);
         $.ajax({
             type: 'GET',
             url: 'json/api/_gl_data_spec.jsp',
@@ -189,6 +170,7 @@ $(document).ready(function () {
             },
             success: function (data) {
                 gl_arr_all = data;
+                //console.log(gl_arr_all);
                 if (data != "") {
                     $("#gl-select").multiselect('dataprovider', data);
                     $("#glstats").html("<span></span>");
@@ -212,7 +194,6 @@ $(document).ready(function () {
         url: 'json/api/_dt_data.jsp',
         dataType: 'json',
         success: function (data) {
-            dt_arr_all = data;
             $("#dt-select").multiselect('dataprovider', data);
         }
     });
@@ -233,13 +214,13 @@ $(document).ready(function () {
                         for (k = 0; k < gl_arr.length; k++) {
                             for (l = 0; l < dt_arr.length; l++) {
                                 subObj = new Object();
-                                subObj["no"] = m;
-                                subObj["ct"] = code_type;
-                                subObj["wh"] = wh_arr[i];
-                                subObj["gm"] = gm_arr[j];
-                                subObj["gl"] = gl_check(gm_arr[j], gl_arr[k]);
-                                subObj["dt"] = dt_arr[l];
                                 if (gl_check(gm_arr[j], gl_arr[k]) !== undefined) {
+                                    subObj["no"] = m;
+                                    subObj["ct"] = code_type;
+                                    subObj["wh"] = wh_arr[i];
+                                    subObj["gm"] = gm_arr[j];
+                                    subObj["gl"] = gl_arr[k];
+                                    subObj["dt"] = dt_arr[l];
                                     data.push(subObj);
                                     m++;
                                     n++;
@@ -249,9 +230,7 @@ $(document).ready(function () {
                     }
                 }
                 mainObj = data;
-                mainObjdis = data;
                 savedisplay(mainObj, n);
-//            console.log(mainObj);
             } catch (e) {
                 console.log(e);
             }
@@ -260,16 +239,11 @@ $(document).ready(function () {
 
 //check gl before push to object
     function gl_check(gm, gl) {
-        for (var i in gl_arr_all) {
-            if (gl_arr_all.hasOwnProperty(i)) {
-                if (JSON.stringify(gl_arr_all[i].label).substr(1, 1) === gm) {
-                    for (var j in gl_arr_all[i].children) {
-//                        console.log(gl_arr_all[i].children[j].value);
-                        if (gl_arr_all[i].children[j].value === gl) {
-                            return gl_arr_all[i].children[j].value;
-//                            console.log(gl_arr_all[i].children[j].value);
-                        }
-                    }
+        for (var i = 0; i < gl_arr_all.length; i++) {
+            for (var j in gl_arr_all[i].children) {
+                if (JSON.stringify(gl_arr_all[i].label).substr(1, 1) === gm && gl_arr_all[i].children[j].value === gl) {
+                    ////console.log(gm + " - " + gl);
+                    return gl_arr_all[i].children[j].value;
                 }
             }
         }
@@ -308,7 +282,6 @@ $(document).ready(function () {
                 key: 'no',
                 value: no
             });
-//            alert(JSON.stringify(specObject));
             table.row($(this).parents('tr')).remove().draw();
         });
 
